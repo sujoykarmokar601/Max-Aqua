@@ -1,398 +1,94 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="bn">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MAX AQUA | Premium Aquarium Fish</title>
-
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>MAX AQUA | Aquarium Marketplace</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
+<div class="topbar"><div class="wrap topbar-in"><span>🔥 MAX AQUA Fish Festival চলছে!</span><span>সারা বাংলাদেশে </span><span>Help & Support</span></div></div>
 
-<nav class="navbar navbar-expand-lg navbar-light fixed-top">
-  <div class="container">
-    <a class="navbar-brand" href="#home"><span class="fish-logo">🐟</span> MAX <b>AQUA</b></a>
-
-    <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#nav">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <div class="collapse navbar-collapse" id="nav">
-      <ul class="navbar-nav mx-auto">
-        <li><a class="nav-link active" href="#home">Home</a></li>
-        <li><a class="nav-link" href="#shop">Shop</a></li>
-        <li><a class="nav-link" href="#categories">Categories</a></li>
-        <li><a class="nav-link" href="#about">About</a></li>
-        <li><a class="nav-link" href="#contact">Contact</a></li>
-      </ul>
-
-      <div class="nav-tools">
-        <div class="mini-search">
-          <input id="navSearch" type="text" placeholder="Search Fish...">
-          <i class="bi bi-search"></i>
-        </div>
-        <button class="round-btn wishlist-open" title="Wishlist"><i class="bi bi-heart"></i><span id="wishlistCount">0</span></button>
-        <button class="round-btn cart-open" data-bs-toggle="offcanvas" data-bs-target="#cartPanel">
-          <i class="bi bi-cart3"></i><span id="cartCount">0</span>
-        </button>
-        <button class="theme-btn" id="themeBtn"><i class="bi bi-moon-fill"></i></button>
-      </div>
+<header class="header">
+  <div class="wrap head-main">
+    <a class="logo" href="#home"><span>🐟</span><strong>MAX <i>AQUA</i></strong></a>
+    <div class="search"><input id="search" placeholder="মাছ, Guppy, Betta, Shrimp খুঁজুন..."><button id="searchBtn">🔍</button></div>
+    <div class="head-actions">
+      <button id="wishlistBtn">♡ <small id="wishCount">0</small></button>
+      <button id="cartBtn">🛒 <small id="cartCount">0</small></button>
     </div>
   </div>
-</nav>
+  <div class="wrap nav-row">
+    <button class="cat-menu" id="categoryToggle">☰ Categories</button>
+    <nav><a href="#home">হোম</a><a href="#products">Fish Shop</a><a href="#deals">Hot Deals</a><a href="#about">About</a><a href="#contact">Contact</a></nav>
+    <a class="admin-link" href="admin.html">Admin Orders ↗</a>
+  </div>
+</header>
 
-<section id="home" class="hero">
-  <div class="container">
-    <div class="hero-content">
-      <h1>Premium<br>Aquarium Fish<br>Collection</h1>
-      <p>Healthy Fish • Live Arrival Guarantee • Home Delivery</p>
-      <div class="hero-buttons">
-        <a href="#shop" class="btn btn-aqua">Shop Now</a>
-        <a href="#categories" class="btn btn-explore">Explore</a>
-      </div>
-    </div>
+<main id="home">
+<section class="hero"><div class="wrap hero-grid">
+  <aside class="category-sidebar">
+    <h3>ক্যাটাগরি</h3>
+    <button data-filter="all">🐟 সব মাছ <span>›</span></button>
+    <button data-filter="Guppy">🐠 Guppy <span>›</span></button>
+    <button data-filter="Betta">🐡 Betta <span>›</span></button>
+    <button data-filter="Shrimp">🦐 Shrimp <span>›</span></button>
+    <button data-filter="Molly">🐟 Molly <span>›</span></button>
+    <button data-filter="Platy">🐠 Platy <span>›</span></button>
+  </aside>
+  <div class="hero-banner">
+    <div class="hero-copy"><span class="sale">MAX AQUA MEGA SALE</span><h1>Premium Aquarium Fish</h1><p>সুন্দর, স্বাস্থ্যবান ও বাছাই করা aquarium fish — এখন এক জায়গায়।</p><a href="#products">Shop Now →</a></div>
     <div class="hero-fish">🐠</div>
   </div>
+</div></section>
+
+<section class="quick-cats"><div class="wrap quick-grid">
+  <button data-filter="Guppy"><span>🐠</span><b>Guppy</b><small>Premium Collection</small></button>
+  <button data-filter="Betta"><span>🐡</span><b>Betta</b><small>Beautiful Betta</small></button>
+  <button data-filter="Shrimp"><span>🦐</span><b>Shrimp</b><small>Fresh Shrimp</small></button>
+  <button data-filter="Molly"><span>🐟</span><b>Molly</b><small>Popular Fish</small></button>
+  <button data-filter="Platy"><span>🐠</span><b>Platy</b><small>Colorful Fish</small></button>
+</div></section>
+
+<section id="deals" class="wrap deals">
+  <div class="section-title"><div><span>FLASH SALE</span><h2>আজকের Hot Deals 🔥</h2></div><div class="timer">LIMITED DEAL</div></div>
+  <div class="deal-strip"><div>🐠</div><div><b>Premium Fish Collection</b><small>আজই অর্ডার করুন</small></div><strong>From ৳100</strong><a href="#products">View Deals ›</a></div>
 </section>
 
-<section id="categories" class="categories section-space">
-  <div class="container">
-    <h2 class="section-title">Shop By Category</h2>
-    <div class="category-grid">
-      <button class="category-card" data-filter="Guppy"><span>🐠</span><b>Guppy</b></button>
-      <button class="category-card" data-filter="Betta"><span>🐟</span><b>Betta</b></button>
-      <button class="category-card" data-filter="Shrimp"><span>🦐</span><b>Shrimp</b></button>
-      <button class="category-card" data-filter="Molly"><span>🐡</span><b>Molly</b></button>
-      <button class="category-card" data-filter="Platy"><span>🐠</span><b>Platy</b></button>
-    </div>
+<section id="products" class="wrap products">
+  <div class="section-title"><div><span>MAX AQUA SHOP</span><h2>জনপ্রিয় মাছ</h2></div>
+    <div class="sorts"><button class="filter active" data-filter="all">সব</button><button class="filter" data-filter="Guppy">Guppy</button><button class="filter" data-filter="Betta">Betta</button><button class="filter" data-filter="Shrimp">Shrimp</button><button class="filter" data-filter="Molly">Molly</button><button class="filter" data-filter="Platy">Platy</button></div>
   </div>
+  <div id="productGrid" class="product-grid"></div>
 </section>
 
-<section id="shop" class="shop section-space">
-  <div class="container">
-    <div class="shop-heading">
-      <div>
-        <h2 class="section-title left">Featured Fish</h2>
-        <p>Choose from our popular aquarium collection.</p>
-      </div>
-      <div class="filter-buttons">
-        <button class="filter active" data-filter="all">All</button>
-        <button class="filter" data-filter="Guppy">Guppy</button>
-        <button class="filter" data-filter="Betta">Betta</button>
-        <button class="filter" data-filter="Shrimp">Shrimp</button>
-        <button class="filter" data-filter="Molly">Molly</button>
-        <button class="filter" data-filter="Platy">Platy</button>
-      </div>
-    </div>
+<section id="about" class="wrap info"><div><span>WHY MAX AQUA</span><h2>Marketplace-এর মতো সহজে মাছ কিনুন</h2><p>Product দেখুন, quantity বাছুন, cart-এ যোগ করুন এবং customer তথ্য দিয়ে order পাঠান।</p></div><div class="info-cards"><div>💙<b>Healthy Fish</b><small>Carefully selected</small></div><div>📦<b>Safe Packing</b><small>Secure delivery</small></div><div>🚚<b>৳150 Delivery</b><small>Fixed delivery charge</small></div></div></section>
 
-    <div class="row g-4" id="productGrid">
+<section id="contact" class="contact"><div class="wrap contact-box"><div><span>MAX AQUA</span><h2>অর্ডার বা সাহায্যের জন্য যোগাযোগ করুন</h2><p>WhatsApp-এ সরাসরি যোগাযোগ করতে পারেন।</p></div><a href="https://wa.me/8801648664796" target="_blank">WhatsApp করুন ↗</a></div></section>
+</main>
 
-      <div class="col-xl-3 col-lg-4 col-md-6 product" data-category="Guppy" data-name="Blue Moscow Guppy">
-        <article class="product-card">
-          <div class="product-img">
-            <img src="https://images.unsplash.com/photo-1524704654690-b56c05c78a00?auto=format&fit=crop&w=800&q=85" alt="Blue Moscow Guppy">
-            <button class="quick-view" data-name="Blue Moscow Guppy" data-price="350"><i class="bi bi-eye"></i></button><button class="wishlist-btn" data-name="Blue Moscow Guppy" data-price="350" title="Wishlist"><i class="bi bi-heart"></i></button>
-          </div>
-          <div class="product-body">
-            <small>GUPPY</small>
-            <h3>Blue Moscow Guppy</h3>
-            <div class="stars">★★★★★</div>
-            <div class="price-row"><strong>৳350</strong><div class="product-actions"><button class="add-cart" data-name="Blue Moscow Guppy" data-price="350">Add To Cart</button><button class="order-now" data-name="Blue Moscow Guppy" data-price="350">Order Now</button></div></div>
-          </div>
-        </article>
-      </div>
+<div id="cartDrawer" class="drawer"><div class="shade" id="cartShade"></div><aside class="drawer-panel"><div class="drawer-head"><h2>🛒 Shopping Cart</h2><button id="closeCart">×</button></div><div id="cartItems" class="drawer-items"></div><div class="cart-foot"><div><span>Subtotal</span><b id="subtotal">৳0</b></div><div><span>Delivery</span><b>৳150</b></div><div class="grand"><span>Total</span><b id="grandTotal">৳0</b></div><button id="checkoutBtn">অর্ডার করুন</button></div></aside></div>
 
-      <div class="col-xl-3 col-lg-4 col-md-6 product" data-category="Betta" data-name="Galaxy Betta">
-        <article class="product-card">
-          <div class="product-img">
-            <img src="https://images.unsplash.com/photo-1522069169874-c58ec4b76be5?auto=format&fit=crop&w=800&q=85" alt="Galaxy Betta">
-            <button class="quick-view" data-name="Galaxy Betta" data-price="600"><i class="bi bi-eye"></i></button><button class="wishlist-btn" data-name="Galaxy Betta" data-price="600" title="Wishlist"><i class="bi bi-heart"></i></button>
-          </div>
-          <div class="product-body">
-            <small>BETTA</small>
-            <h3>Galaxy Betta</h3>
-            <div class="stars">★★★★★</div>
-            <div class="price-row"><strong>৳600</strong><div class="product-actions"><button class="add-cart" data-name="Galaxy Betta" data-price="600">Add To Cart</button><button class="order-now" data-name="Galaxy Betta" data-price="600">Order Now</button></div></div>
-          </div>
-        </article>
-      </div>
+<div id="orderModal" class="modal"><div class="modal-box"><button class="x" id="closeOrder">×</button><span>CHECKOUT</span><h2>অর্ডার তথ্য</h2><form id="orderForm">
+<label>নাম<input id="customerName" required placeholder="আপনার নাম"></label>
+<label>মোবাইল<input id="customerPhone" required inputmode="tel" placeholder="01XXXXXXXXX"></label>
+<label>ঠিকানা<textarea id="customerAddress" required placeholder="সম্পূর্ণ ঠিকানা"></textarea></label>
+<div id="orderSummary" class="summary"></div>
+<button type="submit">WhatsApp-এ Order পাঠান</button></form></div></div>
 
-      <div class="col-xl-3 col-lg-4 col-md-6 product" data-category="Shrimp" data-name="Red Cherry Shrimp">
-        <article class="product-card">
-          <div class="product-img">
-            <img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=800&q=85" alt="Red Cherry Shrimp">
-            <button class="quick-view" data-name="Red Cherry Shrimp" data-price="150"><i class="bi bi-eye"></i></button><button class="wishlist-btn" data-name="Red Cherry Shrimp" data-price="150" title="Wishlist"><i class="bi bi-heart"></i></button>
-          </div>
-          <div class="product-body">
-            <small>SHRIMP</small>
-            <h3>Red Cherry Shrimp</h3>
-            <div class="stars">★★★★★</div>
-            <div class="price-row"><strong>৳150</strong><div class="product-actions"><button class="add-cart" data-name="Red Cherry Shrimp" data-price="150">Add To Cart</button><button class="order-now" data-name="Red Cherry Shrimp" data-price="150">Order Now</button></div></div>
-          </div>
-        </article>
-      </div>
 
-      <div class="col-xl-3 col-lg-4 col-md-6 product" data-category="Shrimp" data-name="Yellow Cherry Shrimp">
-        <article class="product-card">
-          <div class="product-img">
-            <img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=800&q=85" alt="Yellow Cherry Shrimp">
-            <button class="quick-view" data-name="Yellow Cherry Shrimp" data-price="150"><i class="bi bi-eye"></i></button><button class="wishlist-btn" data-name="Yellow Cherry Shrimp" data-price="150" title="Wishlist"><i class="bi bi-heart"></i></button>
-          </div>
-          <div class="product-body">
-            <small>SHRIMP</small>
-            <h3>Yellow Cherry Shrimp</h3>
-            <em>(1 pair)</em>
-            <div class="stars">★★★★★</div>
-            <div class="price-row"><strong>৳150</strong><div class="product-actions"><button class="add-cart" data-name="Yellow Cherry Shrimp" data-price="150">Add To Cart</button><button class="order-now" data-name="Yellow Cherry Shrimp" data-price="150">Order Now</button></div></div>
-          </div>
-        </article>
-      </div>
-
-      <div class="col-xl-3 col-lg-4 col-md-6 product" data-category="Molly" data-name="Balloon Molly">
-        <article class="product-card">
-          <div class="product-img">
-            <img src="https://images.unsplash.com/photo-1535591273668-578e31182c4f?auto=format&fit=crop&w=800&q=85" alt="Balloon Molly">
-            <button class="quick-view" data-name="Balloon Molly" data-price="250"><i class="bi bi-eye"></i></button><button class="wishlist-btn" data-name="Balloon Molly" data-price="250" title="Wishlist"><i class="bi bi-heart"></i></button>
-          </div>
-          <div class="product-body">
-            <small>MOLLY</small>
-            <h3>Balloon Molly</h3>
-            <div class="stars">★★★★★</div>
-            <div class="price-row"><strong>৳250</strong><div class="product-actions"><button class="add-cart" data-name="Balloon Molly" data-price="250">Add To Cart</button><button class="order-now" data-name="Balloon Molly" data-price="250">Order Now</button></div></div>
-          </div>
-        </article>
-      </div>
-
-      <div class="col-xl-3 col-lg-4 col-md-6 product" data-category="Platy" data-name="Sunset Platy">
-        <article class="product-card">
-          <div class="product-img">
-            <img src="https://images.unsplash.com/photo-1520302519878-0c0b7f8d7f6a?auto=format&fit=crop&w=800&q=85" alt="Sunset Platy">
-            <button class="quick-view" data-name="Sunset Platy" data-price="200"><i class="bi bi-eye"></i></button><button class="wishlist-btn" data-name="Sunset Platy" data-price="200" title="Wishlist"><i class="bi bi-heart"></i></button>
-          </div>
-          <div class="product-body">
-            <small>PLATY</small>
-            <h3>Sunset Platy</h3>
-            <div class="stars">★★★★★</div>
-            <div class="price-row"><strong>৳200</strong><div class="product-actions"><button class="add-cart" data-name="Sunset Platy" data-price="200">Add To Cart</button><button class="order-now" data-name="Sunset Platy" data-price="200">Order Now</button></div></div>
-          </div>
-        </article>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<section id="about" class="about section-space">
-  <div class="container">
-    <div class="row align-items-center g-5">
-      <div class="col-lg-6">
-        <span class="eyebrow">ABOUT MAX AQUA</span>
-        <h2>Build Your Dream Aquarium</h2>
-        <p>We provide quality aquarium fish, shrimp, aquatic plants and aquarium essentials for hobbyists in Bangladesh.</p>
-        <div class="stats">
-          <div><b>500+</b><span>Happy Customers</span></div>
-          <div><b>50+</b><span>Fish Varieties</span></div>
-          <div><b>100%</b><span>Care</span></div>
-        </div>
-      </div>
-      <div class="col-lg-6">
-        <div class="about-box"><span>🐠</span><h3>Healthy Fish • Honest Service</h3><p>Carefully selected aquatic life with friendly support.</p></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="contact" class="contact section-space">
-  <div class="container">
-    <h2 class="section-title">Contact MAX AQUA</h2>
-    <form id="contactForm" class="contact-form">
-      <div class="row g-3">
-        <div class="col-md-6"><input class="form-control" placeholder="Your Name" required></div>
-        <div class="col-md-6"><input class="form-control" placeholder="Phone Number" required></div>
-        <div class="col-12"><textarea class="form-control" rows="4" placeholder="Your message" required></textarea></div>
-        <div class="col-12"><button class="btn btn-aqua">Send Message</button></div>
-      </div>
-    </form>
-  </div>
-</section>
-
-<footer>
-  <div class="container footer-grid">
-    <div><a class="navbar-brand" href="#home">🐟 MAX <b>AQUA</b></a><p>Premium aquarium fish and accessories.</p></div>
-    <div><h5>Quick Links</h5><a href="#shop">Shop</a><a href="#categories">Categories</a><a href="#about">About</a><a href="#contact">Contact</a></div>
-    <div><h5>Follow MAX AQUA</h5><div class="social-links">
-      <a href="https://facebook.com/" target="_blank" rel="noopener" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
-      <a href="https://youtube.com/" target="_blank" rel="noopener" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
-      <a href="https://tiktok.com/" target="_blank" rel="noopener" aria-label="TikTok"><i class="bi bi-tiktok"></i></a>
-      <a href="https://wa.me/8801648664796" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="bi bi-whatsapp"></i></a>
-    </div><p class="mt-2"><a href="tel:+8801648664796">+8801648664796</a></p></div>
-  </div>
-  <div class="copyright">© 2026 MAX AQUA. All Rights Reserved.</div>
-</footer>
-<a class="floating-whatsapp" href="https://wa.me/8801648664796" target="_blank" rel="noopener" aria-label="Order on WhatsApp"><i class="bi bi-whatsapp"></i></a>
-
-<div class="offcanvas offcanvas-end" tabindex="-1" id="cartPanel">
-  <div class="offcanvas-header"><h5>Your Cart</h5><button class="btn-close" data-bs-dismiss="offcanvas"></button></div>
-  <div class="offcanvas-body">
-    <div id="cartItems"><div class="empty-cart">Your cart is empty.</div></div>
-    <div class="cart-total"><span>Total</span><b>৳<span id="cartTotal">0</span></b></div>
-    <button id="checkout" class="btn btn-aqua w-100">Proceed to Checkout</button>
-  </div>
+<div class="social-float-right">
+  <a class="social-btn whatsapp-btn" href="https://wa.me/8801648664796" target="_blank" rel="noopener" aria-label="WhatsApp" title="WhatsApp">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.52 3.48A11.84 11.84 0 0 0 12.08 0C5.55 0 .24 5.3.24 11.84c0 2.09.55 4.13 1.59 5.94L.13 24l6.36-1.67a11.82 11.82 0 0 0 5.59 1.42h.01c6.53 0 11.84-5.31 11.84-11.84 0-3.17-1.23-6.14-3.41-8.43ZM12.09 21.73h-.01a9.85 9.85 0 0 1-5.02-1.38l-.36-.21-3.77.99 1.01-3.67-.23-.38a9.84 9.84 0 1 1 8.38 4.65Zm5.4-7.38c-.3-.15-1.78-.88-2.05-.98-.28-.1-.48-.15-.68.15-.2.3-.78.98-.96 1.18-.18.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.76-1.67-2.06-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.53.15-.18.2-.3.3-.5.1-.2.05-.38-.03-.53-.08-.15-.68-1.63-.93-2.23-.24-.58-.49-.5-.68-.51h-.58c-.2 0-.53.07-.8.38-.28.3-1.05 1.03-1.05 2.5 0 1.48 1.08 2.9 1.23 3.1.15.2 2.12 3.24 5.13 4.54.72.31 1.28.49 1.72.63.72.23 1.38.2 1.9.12.58-.09 1.78-.73 2.03-1.43.25-.7.25-1.3.18-1.43-.08-.13-.28-.2-.58-.35Z"/></svg>
+  </a>
+  <a class="social-btn messenger-btn" href="https://www.facebook.com/messages/" target="_blank" rel="noopener" aria-label="Messenger" title="Messenger">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0C5.37 0 0 4.93 0 11.02c0 3.47 1.72 6.55 4.42 8.47V24l4.05-2.22c1.12.31 2.3.48 3.53.48 6.63 0 12-4.93 12-11.02S18.63 0 12 0Zm1.19 14.82-3.06-3.27-5.97 3.27 6.57-6.97 3.03 3.27 3.03 3.27 5.99-3.27-6.56 6.97Z"/></svg>
+  </a>
 </div>
-
-<div class="modal fade" id="productModal">
-  <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content">
-      <div class="modal-header"><h5>Product Details</h5><button class="btn-close" data-bs-dismiss="modal"></button></div>
-      <div class="modal-body text-center p-4">
-        <div class="modal-fish">🐠</div>
-        <h3 id="modalName"></h3>
-        <p>Premium aquarium product from MAX AQUA.</p>
-        <h4 class="aqua-text">৳<span id="modalPrice"></span></h4>
-      </div>
-    </div>
-  </div>
-</div>
-
-
-<!-- WISHLIST MODAL -->
-<div class="modal fade" id="wishlistModal" tabindex="-1"><div class="modal-dialog modal-dialog-centered"><div class="modal-content">
-<div class="modal-header"><h5>My Wishlist</h5><button class="btn-close" data-bs-dismiss="modal"></button></div>
-<div class="modal-body" id="wishlistItems"><div class="empty-cart">Your wishlist is empty.</div></div>
-</div></div></div>
-<!-- CART CHECKOUT MODAL -->
-<div class="modal fade" id="checkoutModal" tabindex="-1"><div class="modal-dialog modal-dialog-centered modal-lg"><div class="modal-content order-modal">
-<div class="modal-header"><div><span class="eyebrow">MAX AQUA CHECKOUT</span><h4 class="mb-0">Complete Your Order</h4></div><button class="btn-close" data-bs-dismiss="modal"></button></div>
-<form id="checkoutForm"><div class="modal-body"><div id="checkoutSummary" class="checkout-summary"></div>
-<div class="row g-3 mt-1"><div class="col-md-6"><label class="form-label">Customer Name *</label><input id="coName" class="form-control" required></div>
-<div class="col-md-6"><label class="form-label">Phone Number *</label><input id="coPhone" class="form-control" type="tel" required placeholder="01XXXXXXXXX"></div>
-<div class="col-12"><label class="form-label">Delivery Address *</label><textarea id="coAddress" class="form-control" rows="3" required></textarea></div>
-<div class="col-md-6"><label class="form-label">Delivery Area *</label><select id="coArea" class="form-select" required><option value="">Choose area</option><option>Inside Dhaka</option><option>Outside Dhaka</option></select></div>
-<div class="col-md-6"><label class="form-label">Payment Method *</label><select id="coPayment" class="form-select" required><option value="">Choose payment</option><option>Cash on Delivery</option><option>bKash</option><option>Nagad</option></select></div>
-<div class="col-12"><label class="form-label">Order Note</label><textarea id="coNote" class="form-control" rows="2"></textarea></div></div>
-<div class="order-total-box"><div class="grand-total"><span>Order Total</span><strong>৳<span id="coTotal">0</span></strong></div></div>
-</div><div class="modal-footer"><button type="button" class="btn btn-explore" data-bs-dismiss="modal">Cancel</button><button class="btn btn-aqua" type="submit"><i class="bi bi-whatsapp"></i> Confirm & WhatsApp</button></div>
-</form></div></div></div>
-
-<!-- ORDER NOW MODAL -->
-<div class="modal fade" id="orderModal" tabindex="-1" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered modal-lg">
-    <div class="modal-content order-modal">
-      <div class="modal-header">
-        <div>
-          <span class="eyebrow">MAX AQUA ORDER</span>
-          <h4 class="mb-0">Place Your Order</h4>
-        </div>
-        <button class="btn-close" data-bs-dismiss="modal"></button>
-      </div>
-
-      <form id="orderForm">
-        <div class="modal-body">
-          <div class="order-product-summary">
-            <div class="order-fish-icon">🐠</div>
-            <div>
-              <small>SELECTED PRODUCT</small>
-              <h5 id="orderProductName">Product Name</h5>
-              <p>Price: <b>৳<span id="orderProductPrice">0</span></b></p>
-            </div>
-          </div>
-
-          <div class="row g-3 mt-1">
-            <div class="col-md-8">
-              <label class="form-label">Customer Name *</label>
-              <input id="customerName" class="form-control" type="text" required placeholder="Enter your name">
-            </div>
-            <div class="col-md-4">
-              <label class="form-label">Quantity *</label>
-              <input id="orderQty" class="form-control" type="number" min="1" value="1" required>
-            </div>
-
-            <div class="col-md-6">
-              <label class="form-label">Phone Number *</label>
-              <input id="customerPhone" class="form-control" type="tel" required placeholder="01XXXXXXXXX">
-            </div>
-            <div class="col-md-6">
-              <label class="form-label">Email (optional)</label>
-              <input id="customerEmail" class="form-control" type="email" placeholder="you@example.com">
-            </div>
-
-            <div class="col-12">
-              <label class="form-label">Delivery Address *</label>
-              <textarea id="customerAddress" class="form-control" rows="3" required placeholder="House/Road, Area, Thana, District"></textarea>
-            </div>
-
-            <div class="col-md-6">
-              <label class="form-label">Delivery Area *</label>
-              <select id="deliveryArea" class="form-select" required>
-                <option value="">Choose area</option>
-                <option value="Inside Dhaka">Inside Dhaka</option>
-                <option value="Outside Dhaka">Outside Dhaka</option>
-              </select>
-            </div>
-            <div class="col-md-6">
-              <label class="form-label">Payment Method *</label>
-              <select id="paymentMethod" class="form-select" required>
-                <option value="">Choose payment</option>
-                <option value="Cash on Delivery">Cash on Delivery</option>
-                <option value="bKash">bKash</option>
-                <option value="Nagad">Nagad</option>
-              </select>
-            </div>
-
-            <div class="col-12">
-              <label class="form-label">Order Note (optional)</label>
-              <textarea id="orderNote" class="form-control" rows="2" placeholder="Any special request?"></textarea>
-            </div>
-          </div>
-
-          <div class="order-total-box">
-            <div><span>Product</span><b id="summaryProduct">—</b></div>
-            <div><span>Quantity</span><b id="summaryQty">1</b></div>
-            <div><span>Delivery</span><b>To be confirmed</b></div>
-            <div class="grand-total"><span>Product Total</span><strong>৳<span id="orderTotal">0</span></strong></div>
-          </div>
-
-          <div class="order-help">
-            <i class="bi bi-whatsapp"></i>
-            After submitting, your order details will be prepared for WhatsApp.
-          </div>
-        </div>
-
-        <div class="modal-footer">
-          <button type="button" class="btn btn-explore" data-bs-dismiss="modal">Cancel</button>
-          <button type="submit" class="btn btn-aqua">
-            <i class="bi bi-whatsapp"></i> Place Order
-          </button>
-        </div>
-      </form>
-    </div>
-  </div>
-</div>
-
-<!-- ORDER SUCCESS MODAL -->
-<div class="modal fade" id="orderSuccessModal" tabindex="-1">
-  <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content text-center p-4">
-      <div class="success-icon"><i class="bi bi-check-lg"></i></div>
-      <h3>Order Ready! 🎉</h3>
-      <p id="successText">Your order has been prepared.</p>
-      <button id="sendWhatsApp" class="btn btn-success w-100 mb-2">
-        <i class="bi bi-whatsapp"></i> Send Order on WhatsApp
-      </button>
-      <button class="btn btn-light w-100" data-bs-dismiss="modal">Close</button>
-    </div>
-  </div>
-</div>
-
-<div class="toast-container position-fixed bottom-0 end-0 p-3">
-  <div id="toast" class="toast"><div class="toast-body">Added to cart.</div></div>
-</div>
-
-<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<footer><div class="wrap footer-in"><b>🐟 MAX AQUA</b><span>Premium Aquarium Fish • Bangladesh</span><span>© 2026 MAX AQUA</span></div></footer>
 <script src="script.js"></script>
 </body>
 </html>
