@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="bn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>MAX AQUA | Aquarium Marketplace</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="topbar"><div class="wrap topbar-in"><span>🔥 MAX AQUA Fish Festival চলছে!</span><span>সারা বাংলাদেশে </span><span>Help & Support</span></div></div>
+
+<header class="header">
+  <div class="wrap head-main">
+    <a class="logo" href="#home"><span>🐟</span><strong>MAX <i>AQUA</i></strong></a>
+    <div class="search"><input id="search" placeholder="মাছ, Guppy, Betta, Shrimp খুঁজুন..."><button id="searchBtn">🔍</button></div>
+    <div class="head-actions">
+      <button id="wishlistBtn">♡ <small id="wishCount">0</small></button>
+      <button id="cartBtn">🛒 <small id="cartCount">0</small></button>
+    </div>
+  </div>
+  <div class="wrap nav-row">
+    <button class="cat-menu" id="categoryToggle">☰ Categories</button>
+    <nav><a href="#home">হোম</a><a href="#products">Fish Shop</a><a href="#deals">Hot Deals</a><a href="#about">About</a><a href="#contact">Contact</a></nav>
+    <a class="admin-link" href="admin.html">Admin Orders ↗</a>
+  </div>
+</header>
+
+<main id="home">
+<section class="hero"><div class="wrap hero-grid">
+  <aside class="category-sidebar">
+    <h3>ক্যাটাগরি</h3>
+    <button data-filter="all">🐟 সব মাছ <span>›</span></button>
+    <button data-filter="Guppy">🐠 Guppy <span>›</span></button>
+    <button data-filter="Betta">🐡 Betta <span>›</span></button>
+    <button data-filter="Shrimp">🦐 Shrimp <span>›</span></button>
+    <button data-filter="Molly">🐟 Molly <span>›</span></button>
+    <button data-filter="Platy">🐠 Platy <span>›</span></button>
+  </aside>
+  <div class="hero-banner">
+    <div class="hero-copy"><span class="sale">MAX AQUA MEGA SALE</span><h1>Premium Aquarium Fish</h1><p>সুন্দর, স্বাস্থ্যবান ও বাছাই করা aquarium fish — এখন এক জায়গায়।</p><a href="#products">Shop Now →</a></div>
+    <div class="hero-fish">🐠</div>
+  </div>
+</div></section>
+
+<section class="quick-cats"><div class="wrap quick-grid">
+  <button data-filter="Guppy"><span>🐠</span><b>Guppy</b><small>Premium Collection</small></button>
+  <button data-filter="Betta"><span>🐡</span><b>Betta</b><small>Beautiful Betta</small></button>
+  <button data-filter="Shrimp"><span>🦐</span><b>Shrimp</b><small>Fresh Shrimp</small></button>
+  <button data-filter="Molly"><span>🐟</span><b>Molly</b><small>Popular Fish</small></button>
+  <button data-filter="Platy"><span>🐠</span><b>Platy</b><small>Colorful Fish</small></button>
+</div></section>
+
+<section id="deals" class="wrap deals">
+  <div class="section-title"><div><span>FLASH SALE</span><h2>আজকের Hot Deals 🔥</h2></div><div class="timer">LIMITED DEAL</div></div>
+  <div class="deal-strip"><div>🐠</div><div><b>Premium Fish Collection</b><small>আজই অর্ডার করুন</small></div><strong>From ৳100</strong><a href="#products">View Deals ›</a></div>
+</section>
+
+<section id="products" class="wrap products">
+  <div class="section-title"><div><span>MAX AQUA SHOP</span><h2>জনপ্রিয় মাছ</h2></div>
+    <div class="sorts"><button class="filter active" data-filter="all">সব</button><button class="filter" data-filter="Guppy">Guppy</button><button class="filter" data-filter="Betta">Betta</button><button class="filter" data-filter="Shrimp">Shrimp</button><button class="filter" data-filter="Molly">Molly</button><button class="filter" data-filter="Platy">Platy</button></div>
+  </div>
+  <div id="productGrid" class="product-grid"></div>
+</section>
+
+<section id="about" class="wrap info"><div><span>WHY MAX AQUA</span><h2>Marketplace-এর মতো সহজে মাছ কিনুন</h2><p>Product দেখুন, quantity বাছুন, cart-এ যোগ করুন এবং customer তথ্য দিয়ে order পাঠান।</p></div><div class="info-cards"><div>💙<b>Healthy Fish</b><small>Carefully selected</small></div><div>📦<b>Safe Packing</b><small>Secure delivery</small></div><div>🚚<b>৳150 Delivery</b><small>Fixed delivery charge</small></div></div></section>
+
+<section id="contact" class="contact"><div class="wrap contact-box"><div><span>MAX AQUA</span><h2>অর্ডার বা সাহায্যের জন্য যোগাযোগ করুন</h2><p>WhatsApp-এ সরাসরি যোগাযোগ করতে পারেন।</p></div><a href="https://wa.me/8801648664796" target="_blank">WhatsApp করুন ↗</a></div></section>
+</main>
+
+<div id="cartDrawer" class="drawer"><div class="shade" id="cartShade"></div><aside class="drawer-panel"><div class="drawer-head"><h2>🛒 Shopping Cart</h2><button id="closeCart">×</button></div><div id="cartItems" class="drawer-items"></div><div class="cart-foot"><div><span>Subtotal</span><b id="subtotal">৳0</b></div><div><span>Delivery</span><b>৳150</b></div><div class="grand"><span>Total</span><b id="grandTotal">৳0</b></div><button id="checkoutBtn">অর্ডার করুন</button></div></aside></div>
+
+<div id="orderModal" class="modal"><div class="modal-box"><button class="x" id="closeOrder">×</button><span>CHECKOUT</span><h2>অর্ডার তথ্য</h2><form id="orderForm">
+<label>নাম<input id="customerName" required placeholder="আপনার নাম"></label>
+<label>মোবাইল<input id="customerPhone" required inputmode="tel" placeholder="01XXXXXXXXX"></label>
+<label>ঠিকানা<textarea id="customerAddress" required placeholder="সম্পূর্ণ ঠিকানা"></textarea></label>
+<div id="orderSummary" class="summary"></div>
+<button type="submit">WhatsApp-এ Order পাঠান</button></form></div></div>
+
+
+<div class="social-float-right">
+  <a class="social-btn whatsapp-btn" href="https://wa.me/8801648664796" target="_blank" rel="noopener" aria-label="WhatsApp" title="WhatsApp">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.52 3.48A11.84 11.84 0 0 0 12.08 0C5.55 0 .24 5.3.24 11.84c0 2.09.55 4.13 1.59 5.94L.13 24l6.36-1.67a11.82 11.82 0 0 0 5.59 1.42h.01c6.53 0 11.84-5.31 11.84-11.84 0-3.17-1.23-6.14-3.41-8.43ZM12.09 21.73h-.01a9.85 9.85 0 0 1-5.02-1.38l-.36-.21-3.77.99 1.01-3.67-.23-.38a9.84 9.84 0 1 1 8.38 4.65Zm5.4-7.38c-.3-.15-1.78-.88-2.05-.98-.28-.1-.48-.15-.68.15-.2.3-.78.98-.96 1.18-.18.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.76-1.67-2.06-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.53.15-.18.2-.3.3-.5.1-.2.05-.38-.03-.53-.08-.15-.68-1.63-.93-2.23-.24-.58-.49-.5-.68-.51h-.58c-.2 0-.53.07-.8.38-.28.3-1.05 1.03-1.05 2.5 0 1.48 1.08 2.9 1.23 3.1.15.2 2.12 3.24 5.13 4.54.72.31 1.28.49 1.72.63.72.23 1.38.2 1.9.12.58-.09 1.78-.73 2.03-1.43.25-.7.25-1.3.18-1.43-.08-.13-.28-.2-.58-.35Z"/></svg>
+  </a>
+  <a class="social-btn messenger-btn" href="https://www.facebook.com/messages/" target="_blank" rel="noopener" aria-label="Messenger" title="Messenger">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0C5.37 0 0 4.93 0 11.02c0 3.47 1.72 6.55 4.42 8.47V24l4.05-2.22c1.12.31 2.3.48 3.53.48 6.63 0 12-4.93 12-11.02S18.63 0 12 0Zm1.19 14.82-3.06-3.27-5.97 3.27 6.57-6.97 3.03 3.27 3.03 3.27 5.99-3.27-6.56 6.97Z"/></svg>
+  </a>
+</div>
+<footer><div class="wrap footer-in"><b>🐟 MAX AQUA</b><span>Premium Aquarium Fish • Bangladesh</span><span>© 2026 MAX AQUA</span></div></footer>
+<script src="script.js"></script>
+</body>
+</html>
